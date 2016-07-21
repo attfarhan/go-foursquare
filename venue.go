@@ -6,6 +6,8 @@ type Venue struct {
 	Name       string
 	Location   Location
 	Categories []Category
+	Verified   Verified
+	Stats      Stats
 }
 
 type Location struct {
@@ -26,4 +28,14 @@ type Category struct {
 	PluralName string
 	ShortName  string
 	Primary    bool
+}
+
+type Verified struct {
+	verified bool
+}
+
+type Stats struct {
+	CheckInsCount int
+	UsersCount    int
+	TipCount      int
 }
